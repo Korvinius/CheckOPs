@@ -1,0 +1,11 @@
+name: CheckOPs
+main: net.wealth_mc.checkops.CheckOPs
+version: 1.7.4
+author: Korvinius
+description: Плагин CheckOPs "Защитим Админку!"
+website: http://wealth-mc.net 
+commands:
+   cop:                 
+      aliases: [checkops]                                                                                                                                                                                                                                                                                                           
+      usage: Неизвестная команда. Используйте /help для просмотра доступных команд.
+      

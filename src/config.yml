@@ -1,0 +1,71 @@
+#***************************************************************#
+#    ***      Плагин CheckOPs "Защитим Админку!"         ***    #
+#    ***      Проект: http://wealth-mc.net               ***    #
+#***************************************************************#
+#ops:
+#  check:        ;0 - отключить, 1 - группа, 2 - ник, 3 - ник+ключ
+#  kmess:        ;причина кика
+#  cmess:        ;сообщение о необходимости ввести ключ
+#  times:        ;задержка перед киком для ввода ключа, сек.
+#  comand:       ;ниже список проверяемых команд
+#    - op        ;команда1
+#    - deop      ;команда2
+#  groupsop:     ;ниже список разрешенных групп
+#  - admin       ;группа1
+#  - moder       ;группа2
+#  playerop:     ;ниже список разрешенных ников и ключей
+#  Nick: keys1   ;ник1: ключ1 #(даже, если не используете проверку ник+ключ, поле ключ все равно заполните
+#  ****: *****   ;ник2: ключ2 #вместо ключа можете оставлять заметку "для себя")
+#  permissions:  ;ниже список проверяемых разрешений (permissions)
+#  - worldedit.*  
+#  - worldguard.*
+ops:
+  check: 1
+  kmess: Отключен от сетвера за незаконное владение правами администратора!
+  cmess: Немедленно введите персональный ключ, иначе будете отключены от сервера!
+  times: 20
+  comand:
+  - authme
+  - unregister
+  - changepassword
+  - pex
+  - ban
+  - unban
+  - mute
+  - op
+  - deop
+  - gm
+  - gamemode
+  - give
+  - eco
+  - tp
+  - tppos
+  - tpahere
+  - s
+  - kick
+  - kill
+  - v
+  - vanish
+  - exp
+  - xp
+  - /wand
+  - /set
+  - /walls
+  - /sel
+  - /replace
+  - rg
+  - region
+  groupsop:
+  - admin 
+  playerop:
+    Admin1: superkey1
+  permissions:
+  - worldedit.*
+  - worldguard.*
+  - essentials.*
+  - authme.*
+  - permissions.*
+enchant:
+  check: true
+  level: 11
+  message: Это запрещенный предмет!
