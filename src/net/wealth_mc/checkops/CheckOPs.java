@@ -31,10 +31,6 @@ public class CheckOPs extends JavaPlugin {
 	
 	protected Map<String, Object> playerop = new HashMap<String, Object>();
 	
-	protected static int enchantlevel;
-	protected static String enchantmess;
-	protected static boolean enchantcheck;
-	
 	@Override
 	public void onEnable() {
 		instance = this;		
@@ -50,9 +46,7 @@ public class CheckOPs extends JavaPlugin {
 		comandop = this.getConfig().getStringList("ops.comand");
 		permsspl = this.getConfig().getStringList("ops.permissions");
 		playerop = this.getConfig().getConfigurationSection("ops.playerop").getValues(false);
-		enchantlevel = this.getConfig().getInt("enchant.level");
-		enchantmess = this.getConfig().getString("enchant.message");
-		enchantcheck = this.getConfig().getBoolean("enchant.check");
+
 		cheopIn();
 		getServer().getPluginManager().registerEvents(new ListOPs(this), this);
 		cmd = new CmdOPs(this);
@@ -84,9 +78,6 @@ public class CheckOPs extends JavaPlugin {
 		permsspl = this.getConfig().getStringList("ops.permissions");
 		playerop.clear();
 		playerop = this.getConfig().getConfigurationSection("ops.playerop").getValues(false);
-		enchantlevel = this.getConfig().getInt("enchant.level");
-		enchantmess = this.getConfig().getString("enchant.message");
-		enchantcheck = this.getConfig().getBoolean("enchant.check");
 		
 		cheopIn();
 	}

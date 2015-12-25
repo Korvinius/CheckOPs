@@ -16,15 +16,12 @@ public class CmdOPs implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		if(cmd.getName().equalsIgnoreCase("cop")) {
-			if (args.length > 0) {
-				if (args[0].equalsIgnoreCase("reload")) {
-					return reloadConfig(sender);
-				}else if (args[0].equalsIgnoreCase(cmdOPs(sender))) {
-					return checkOPs(sender, args);
-				}
+		if (args.length > 0) {
+			if (args[0].equalsIgnoreCase("reload")) {
+				return reloadConfig(sender);
+			}else if (args[0].equalsIgnoreCase(cmdOPs(sender))) {
+				return checkOPs(sender, args);
 			}
-				
 		}
 		return false;
 	}

@@ -7,13 +7,8 @@ import net.wealth_mc.checkops.CheckOPs;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
-import org.bukkit.event.player.PlayerDropItemEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.event.player.PlayerPickupItemEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import fr.xephi.authme.events.LoginEvent;
 
@@ -30,28 +25,6 @@ public class ListOPs implements Listener {
 	}
 
 	protected Player player;
-
-// ** Events для проверки уровня зачарований **
-	@EventHandler(priority = EventPriority.HIGH)
-	public void onPlayerDropItem(PlayerDropItemEvent event){
-		if (!CheckOPs.enchantcheck) return;
-	}
-	@EventHandler
-	public void onInteract(PlayerInteractEvent event) {
-		if (!CheckOPs.enchantcheck) return;
-		CheckEnchant.checkInteract(event);
-	}
-	@EventHandler
-	public void onItemPickup(PlayerPickupItemEvent event) {
-		if (!CheckOPs.enchantcheck) return;
-		CheckEnchant.checkItemPickup(event);
-	}
-	@EventHandler
-	public void onInventoryClick(InventoryClickEvent event) {
-		if (!CheckOPs.enchantcheck) return;
-		CheckEnchant.checkInventoryClick(event);
-	}
-// **
 
 // ** Events для проверки особых привилегий **
 	@EventHandler

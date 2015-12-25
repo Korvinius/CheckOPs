@@ -65,7 +65,3 @@ ops:
   - essentials.*
   - authme.*
   - permissions.*
-enchant:
-  check: true
-  level: 11
-  message: Это запрещенный предмет!
